@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -20,18 +19,25 @@ public class Profile extends HttpServlet {
                 response.setContentType("text/html");
 
                 String person, dbPerson = "";
+                String address = "";
                 int age = 0;
-                //PrintWriter output = response.getWriter();
+
                 try{
                     try (Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword())) {
                         person = request.getParameter("person");
                         Statement statement = connection.createStatement();
-                        ResultSet resultSet = statement.executeQuery("SELECT * FROM employers WHERE fullname='" +
+                        ResultSet resultSet = statement.executeQuery("SELECT employers.fullname, employers.age, " +
+                                "addresses.full_address\n" +
+                                "FROM employers\n" +
+                                "INNER JOIN addresses ON addresses.id = employers.id_address\n" +
+                                "WHERE fullname ='" +
                                 person + "'");
                         while (resultSet.next()){
-                            if(Objects.equals(person, resultSet.getString(2))){
-                                dbPerson = resultSet.getString(2);
-                                age = resultSet.getInt(3);
+                            if(Objects.equals(person, resultSet.getString(1))){
+                                dbPerson = resultSet.getString(1);
+                                age = resultSet.getInt(2);
+                                address = resultSet.getString(3);
+
                                 break;
                             }
                         }
@@ -48,6 +54,7 @@ public class Profile extends HttpServlet {
 
                 request.setAttribute("person", dbPerson);
                 request.setAttribute("age", age);
+                request.setAttribute("address", address);
                 getServletContext().getRequestDispatcher("/profile.jsp").forward(request, response);
     }
 }

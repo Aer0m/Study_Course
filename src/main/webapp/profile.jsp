@@ -6,6 +6,6 @@
 <title>JSP Application</title>
 </head>
 <body>
-<p>${person}, ${age}</p>
+<p>${person}, ${age}, ${address}</p>
 </body>
 </html>
