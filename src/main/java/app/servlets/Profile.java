@@ -18,13 +18,13 @@ public class Profile extends HttpServlet {
                 //ArrayList<String> employers = new ArrayList<>();
                 response.setContentType("text/html");
 
-                String person, dbPerson = "";
-                String address = "";
+                String dbPerson = "", address = "";
                 int age = 0;
+                String person = request.getParameter("person");
 
                 try{
                     try (Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword())) {
-                        person = request.getParameter("person");
+
                         Statement statement = connection.createStatement();
                         ResultSet resultSet = statement.executeQuery("SELECT employers.fullname, employers.age, " +
                                 "addresses.full_address\n" +
@@ -41,9 +41,6 @@ public class Profile extends HttpServlet {
                                 break;
                             }
                         }
-                        if(!Objects.equals(person, dbPerson)){
-                            dbPerson = "404 not found";
-                        }
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
@@ -52,9 +49,16 @@ public class Profile extends HttpServlet {
                     e.printStackTrace();
                 }
 
-                request.setAttribute("person", dbPerson);
-                request.setAttribute("age", age);
-                request.setAttribute("address", address);
-                getServletContext().getRequestDispatcher("/profile.jsp").forward(request, response);
+                if(!Objects.equals(person, dbPerson)){
+                    dbPerson = "404 not found";
+                    request.setAttribute("person", dbPerson);
+                    getServletContext().getRequestDispatcher("/profile.jsp").forward(request, response);
+                }
+                else {
+                    request.setAttribute("person", dbPerson);
+                    request.setAttribute("age", age);
+                    request.setAttribute("address", address);
+                    getServletContext().getRequestDispatcher("/profile.jsp").forward(request, response);
+                }
     }
 }
