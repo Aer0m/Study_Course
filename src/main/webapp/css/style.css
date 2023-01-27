@@ -1,0 +1,58 @@
+img {
+	float: left;
+	width: 15%;
+	height: 15%;
+
+}
+
+.office-nav {
+	display: flex;
+	width: 1000px;
+	margin: auto;
+	justify-content: space-around;
+}
+
+.profile {
+
+	width: 1720px;
+	height: 500px;
+	margin: auto;
+	text-align: left;
+	background: rgb(0, 151, 19);
+	text-align:justify;
+	background: rgba(0, 151, 19, 0.3);
+
+}
+
+p {
+	margin-top: 20px;
+}
+
+
+.data {
+	margin-top: 30px;
+	font-weight: bold;
+}
+
+
+.info {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.list {
+	width: 1720px;
+	height: 500px;
+	margin: auto;
+}
+
+.list-content {
+	display: flex;
+	justify-content: center;
+}
+
+li {
+	display: flex;
+	justify-content: center;
+}

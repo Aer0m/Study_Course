@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class Office extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
+                response.setContentType("text/html");
                 ArrayList<String> employers = new ArrayList<>();
                 try{
                     try (Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword())) {

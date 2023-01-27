@@ -18,47 +18,52 @@ public class Profile extends HttpServlet {
                 //ArrayList<String> employers = new ArrayList<>();
                 response.setContentType("text/html");
 
-                String dbPerson = "", address = "";
+                String dbPerson = "", address = "", schedule = "";
                 int age = 0;
                 String person = request.getParameter("person");
-
-                try{
                     try (Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword())) {
 
                         Statement statement = connection.createStatement();
-                        ResultSet resultSet = statement.executeQuery("SELECT employers.fullname, employers.age, " +
-                                "addresses.full_address\n" +
+                        ResultSet resultSet = statement.executeQuery("SELECT employers.fullname, employers.age,\n" +
+                                "addresses.county, addresses.neighbourhood, addresses.full_address, \n" +
+                                "schedule.begintime, schedule.endtime\n" +
                                 "FROM employers\n" +
-                                "INNER JOIN addresses ON addresses.id = employers.id_address\n" +
-                                "WHERE fullname ='" +
+                                "JOIN addresses ON \n" +
+                                "addresses.id = employers.id_address\n" +
+                                "JOIN schedule ON\n" +
+                                "schedule.id = employers.id_schedule\n" +
+                                "WHERE fullname = '" +
                                 person + "'");
                         while (resultSet.next()){
                             if(Objects.equals(person, resultSet.getString(1))){
                                 dbPerson = resultSet.getString(1);
                                 age = resultSet.getInt(2);
-                                address = resultSet.getString(3);
+                                address = resultSet.getString(3) + ", " +
+                                        resultSet.getString(4) + ", " +
+                                            resultSet.getString(5);
+                                schedule = resultSet.getString(6) + " — " +
+                                        resultSet.getString(7);
 
                                 break;
+                            }
+                            else {
+                                dbPerson = "404";
                             }
                         }
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
-                }
-                catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                if(!Objects.equals(person, dbPerson)){
-                    dbPerson = "404 not found";
-                    request.setAttribute("person", dbPerson);
-                    getServletContext().getRequestDispatcher("/profile.jsp").forward(request, response);
+                if(Objects.equals("404", dbPerson)){
+                    getServletContext().getRequestDispatcher("/404.jsp").forward(request, response);
+                    //тут будет редирект на страницу ошибки
                 }
                 else {
                     request.setAttribute("person", dbPerson);
                     request.setAttribute("age", age);
                     request.setAttribute("address", address);
+                    request.setAttribute("schedule", schedule);
                     getServletContext().getRequestDispatcher("/profile.jsp").forward(request, response);
                 }
+
     }
 }
