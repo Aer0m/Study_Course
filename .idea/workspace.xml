@@ -13,6 +13,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Chart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Chart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Office.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Profile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +168,8 @@
       <workItem from="1674812535929" duration="5209000" />
       <workItem from="1674818192917" duration="2388000" />
       <workItem from="1675338515009" duration="521000" />
+      <workItem from="1678129000078" duration="2912000" />
+      <workItem from="1678432874946" duration="256000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1674817649454</created>

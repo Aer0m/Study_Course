@@ -14,9 +14,9 @@ import java.util.ArrayList;
 public class Office extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
+            try {
                 response.setContentType("text/html");
                 ArrayList<String> employers = new ArrayList<>();
-                try{
                     try (Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword())) {
                         Statement statement = connection.createStatement();
                         ResultSet resultSet = statement.executeQuery("SELECT * FROM employers ORDER BY fullname");
