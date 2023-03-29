@@ -27,10 +27,10 @@
                             <a class="nav-link" aria-current="page" href="getdata">Список сотрудников</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  active" href="#">Профиль</a>
+                            <a class="nav-link  active" href="profile">Профиль</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Графики</a>
+                            <a class="nav-link" href="chart">Графики</a>
                         </li>
                     </ul>
                 </div>

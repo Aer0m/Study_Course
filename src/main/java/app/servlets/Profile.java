@@ -35,7 +35,7 @@ public class Profile extends HttpServlet {
                                     "WHERE fullname = '" +
                                     person + "'");
                             while (resultSet.next()) {
-                                if (Objects.equals(person, resultSet.getString(1))) {
+                                if(Objects.equals(person, resultSet.getString(1))) {
                                     dbPerson = resultSet.getString(1);
                                     age = resultSet.getInt(2);
                                     address = resultSet.getString(3) + ", " +
@@ -47,6 +47,7 @@ public class Profile extends HttpServlet {
                                     break;
                                 } else {
                                     dbPerson = "404";
+                                    break;
                                 }
                             }
                         } catch (SQLException e) {
@@ -55,6 +56,7 @@ public class Profile extends HttpServlet {
                         if (Objects.equals("404", dbPerson)) {
                             getServletContext().getRequestDispatcher("/404.jsp").forward(request, response);
                             //тут будет редирект на страницу ошибки
+                            
                         } else {
                             request.setAttribute("person", dbPerson);
                             request.setAttribute("age", age);

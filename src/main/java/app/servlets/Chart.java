@@ -12,7 +12,8 @@ import java.util.Arrays;
 @WebServlet("/chart")
 public class Chart extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         try {
             response.setContentType("text/html");
             int[] ages = new int[4];
@@ -35,12 +36,10 @@ public class Chart extends HttpServlet {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-
-
-            PrintWriter output = response.getWriter();
-            output.println(Arrays.toString(ages));
-            //request.setAttribute("ages", ages);
-            //getServletContext().getRequestDispatcher("/chart.jsp").forward(request, response);
+            //PrintWriter output = response.getWriter();
+            //output.println(Arrays.toString(ages));
+            request.setAttribute("ages", ages);
+            getServletContext().getRequestDispatcher("/chart.jsp").forward(request, response);
         }
 
         catch (Exception e){

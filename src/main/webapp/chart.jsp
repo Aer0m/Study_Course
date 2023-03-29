@@ -1,21 +1,24 @@
-<%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.Arrays" %>
 <%@ page import="java.util.ArrayList" %>
+<%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+int [] ages = new int[4];
+ages = (int[]) request.getAttribute("ages");
+String mass = Arrays.toString(ages);
+
+%>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Главная</title>
-</head>
-<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Список</title>
+    <title>График</title>
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <title></title>
 </head>
 <header>
-    <%ArrayList<String> employers = (ArrayList<String>) (request.getAttribute("employers"));%>
     <div class="office-nav">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -28,10 +31,10 @@
                             <a class="nav-link active" aria-current="page" href="getdata">Список сотрудников</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="profile?person=<%=employers.get(0)%>">Профиль</a>
+                            <a class="nav-link" href="profile?person=">Профиль</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="chart">Графики</a>
+                            <a class="nav-link active" href="chart">Графики</a>
                         </li>
                     </ul>
                 </div>
@@ -39,16 +42,31 @@
         </nav>
     </div>
 </header>
+</header>
 <body>
-
-<div class="list">
-    <ul class="list-content">
-        <%
-            for(int i = 0; i < employers.toArray().length; i++){
-               out.print("<li>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+employers.get(i)+"'>" + employers.get(i) + "</a>" + "</li>");
-            }
-        %>
-    </ul>
+<div>
+    <canvas id="myChart" style="display: block; box-sizing: border-box; height: 292px; width: 584px;" width="584" height="292"></canvas>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    let age = '<%=mass%>';
+    let arr = JSON.parse("[" + age + "]");
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['18-25', '26-30', '31-45', '45+'],
+            datasets: [{
+                label: 'Возраста',
+                data: [arr[0][0], arr[0][1], arr[0][2], arr[0][3]],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+</script>
 </body>
 </html>

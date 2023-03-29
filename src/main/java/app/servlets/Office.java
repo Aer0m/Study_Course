@@ -28,6 +28,8 @@ public class Office extends HttpServlet {
                     }
                     request.setAttribute("employers", employers);
                     getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+                    getServletContext().getRequestDispatcher("/profile.jsp").forward(request, response);
+                    getServletContext().getRequestDispatcher("/Chart.jsp").forward(request, response);
                 }
 
                 catch (Exception e) {
