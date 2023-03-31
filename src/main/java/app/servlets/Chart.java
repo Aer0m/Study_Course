@@ -11,6 +11,16 @@ import java.util.Arrays;
 
 @WebServlet("/chart")
 public class Chart extends HttpServlet {
+    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        HttpSession session = request.getSession();
+        Boolean authenticated = (Boolean) session.getAttribute("authenticated");
+
+        if (authenticated == null || !authenticated) {
+            response.sendRedirect(request.getContextPath() + "/login.jsp");
+        } else {
+            super.service(request, response);
+        }
+    }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

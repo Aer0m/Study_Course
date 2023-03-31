@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
         if (USERNAME.equals(username) && PASSWORD.equals(password)) {
             HttpSession session = request.getSession();
             session.setAttribute("authenticated", true);
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("getdata");
         } else {
             response.sendRedirect("login.jsp?error=true");
         }
