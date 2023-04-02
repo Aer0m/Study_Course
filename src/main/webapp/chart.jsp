@@ -14,7 +14,6 @@ String mass = Arrays.toString(ages);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>График</title>
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title></title>
 </head>

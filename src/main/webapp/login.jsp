@@ -3,6 +3,7 @@
 <html><head>
     <meta charset="UTF-8">
     <title>Login Page</title>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <form action="login" method="post">
