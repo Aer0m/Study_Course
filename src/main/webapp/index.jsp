@@ -33,6 +33,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="chart">Графики</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout">Выход</a>
+                        </li>
                     </ul>
                 </div>
             </div>
