@@ -1,6 +1,6 @@
 package app.servlets;
 
-import database.config.DbConfig;
+import database.config.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,6 +26,7 @@ public class Office extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
+            request.setCharacterEncoding("UTF-8");
             try {
                 response.setContentType("text/html");
                 ArrayList<String> employers = new ArrayList<>();

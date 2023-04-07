@@ -1,6 +1,6 @@
 package app.servlets;
 
-import database.config.DbConfig;
+import database.config.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;

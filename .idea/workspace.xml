@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="JSP:war" />
-      <artifact name="JSP:war exploded" />
+      <artifact name="Office:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="" />
+    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="create_query">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/CreateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/CreateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Office.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/form.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,7 +76,7 @@
     <configuration name="GlassFish 4.1.2" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 4.1.2" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:\Java\jre" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="JSP:war exploded">
+        <artifact name="Office:war exploded">
           <settings />
         </artifact>
       </deployment>
@@ -135,8 +140,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="JSP:war" />
-          <artifact name="JSP:war exploded" />
+          <artifact name="Office:war exploded" />
         </option>
       </method>
     </configuration>
@@ -254,6 +258,10 @@
       <workItem from="1680465299912" duration="674000" />
       <workItem from="1680520073628" duration="5588000" />
       <workItem from="1680533204303" duration="2492000" />
+      <workItem from="1680538032362" duration="80000" />
+      <workItem from="1680538129255" duration="6691000" />
+      <workItem from="1680691146492" duration="2327000" />
+      <workItem from="1680855165207" duration="10084000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1674817649454</created>
@@ -269,7 +277,28 @@
       <option name="project" value="LOCAL" />
       <updated>1674817732044</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="DbConfig">
+      <created>1680538263166</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680538263166</updated>
+    </task>
+    <task id="LOCAL-00004" summary="create_form">
+      <created>1680857990931</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680857990931</updated>
+    </task>
+    <task id="LOCAL-00005" summary="create_query">
+      <created>1680872750230</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680872750230</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +317,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="index" />
-    <option name="LAST_COMMIT_MESSAGE" value="index" />
+    <MESSAGE value="DbConfig" />
+    <MESSAGE value="create_form" />
+    <MESSAGE value="create_query" />
+    <option name="LAST_COMMIT_MESSAGE" value="create_query" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
