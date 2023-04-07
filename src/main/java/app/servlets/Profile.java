@@ -1,6 +1,6 @@
 package app.servlets;
 
-import database.config.DbConfig;
+import database.config.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
