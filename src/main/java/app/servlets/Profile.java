@@ -28,6 +28,7 @@ public class Profile extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
+                request.setCharacterEncoding("UTF-8");
                 try {
                     //ArrayList<String> employers = new ArrayList<>();
                     response.setContentType("text/html");

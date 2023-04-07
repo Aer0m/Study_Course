@@ -5,7 +5,7 @@
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<form action="create" method="post" accept-charset="UTF-8">
+<form action="create" method="post" accept-charset="windows-1251">
     <label for="fullname">ФИО:</label>
     <input type="text" id="fullname" name="fullname"><br><br>
     <label for="age">Возраст:</label>

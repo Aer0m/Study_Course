@@ -25,6 +25,7 @@ public class CreateServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
+        request.setCharacterEncoding("UTF-8");
         try {
             response.setContentType("text/html");
             String fullname = request.getParameter("fullname");
