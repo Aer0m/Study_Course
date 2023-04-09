@@ -5,13 +5,13 @@
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<form action="create" method="post" accept-charset="UTF-8">
+<form action="create" method="post" accept-charset="UTF-8" class="form-valid">
     <label for="fullname">ФИО:</label>
-    <input type="text" id="fullname" name="fullname"><br><br>
+    <input type="text" id="fullname" name="fullname" class="fullname"><br><br>
     <label for="age">Возраст:</label>
-    <input type="text" id="age" name="age"><br><br>
+    <input type="text" id="age" name="age" class="age"><br><br>
     <label for="county">Округ:</label>
-    <select id="county" name="county">
+    <select id="county" name="county" class="county">
         <option>ВАО</option>
         <option>ЗАО</option>
         <option>ЗелАО</option>
@@ -25,14 +25,36 @@
         <option>ЮЗАО</option>
     </select><br><br>
     <label for="neigh">Район:</label>
-    <input type="text" id="neigh" name="neigh"><br><br>
+    <input type="text" id="neigh" name="neigh" class="neigh"><br><br>
     <label for="address">Адрес:</label>
-    <input type="text" id="address" name="address"><br><br>
+    <input type="text" id="address" name="address" class="address"><br><br>
     <label for="begintime">Начало рабочего дня:</label>
-    <input type="time" id="begintime" name="begintime"><br><br>
+    <input type="time" id="begintime" name="begintime" class="begintime"><br><br>
     <label for="endtime">Конец рабочего дня:</label>
-    <input type="time" id="endtime" name="endtime"><br><br>
-    <input type="submit" value="Submit">
+    <input type="time" id="endtime" name="endtime" class="endtime"><br><br>
+    <input type="submit" value="Submit" class="validBtn">
 </form>
+<script lang="javascript">
+    var validateBtn = document.querySelector('.validBtn');
+    var form = document.querySelector('.form-valid');
+    var fullname = document.querySelector('.fullname');
+    var age = document.querySelector('.age');
+    var county = document.querySelector('.county');
+    var neigh = document.querySelector('.neigh');
+    var address = document.querySelector('.address');
+    var begintime = document.querySelector('.begintime');
+    var endtime = document.querySelector('.endtime');
+    form.addEventListener('submit', function () {
+        event.preventDefault(); //прерывает метод submit для просмотра значений полей формы
+        console.log('clicked on validate');
+        console.log('fullname: ', fullname.value);
+        console.log('age: ', age.value);
+        console.log('county: ', county.value);
+        console.log('neighbourhood: ', neigh.value);
+        console.log('address: ', address.value);
+        console.log('begin time: ', begintime.value);
+        console.log('end time: ', endtime.value);
+    });
+</script>
 </body>
 </html>
