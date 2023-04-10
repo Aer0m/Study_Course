@@ -17,13 +17,17 @@ public class Office extends HttpServlet {
         HttpSession session = request.getSession();
         Boolean authenticated = (Boolean) session.getAttribute("authenticated");
 
+        if ((request.getRequestURI().endsWith(".css")) || (request.getContextPath().endsWith(".jpg"))) {
+            super.service(request, response); // пропустить запрос к файлу CSS
+            return;
+        }
+
         if (authenticated == null || !authenticated) {
             response.sendRedirect(request.getContextPath() + "/login.jsp");
         } else {
             super.service(request, response);
         }
     }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
             request.setCharacterEncoding("UTF-8");

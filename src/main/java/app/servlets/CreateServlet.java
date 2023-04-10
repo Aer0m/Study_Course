@@ -51,6 +51,8 @@ public class CreateServlet extends HttpServlet {
                         "INSERT INTO employers (fullname, age, id_address, id_schedule)\n" +
                         "VALUES ('"+fullname+"', '"+age+"', (SELECT id FROM new_address), (SELECT id FROM new_time));");
 
+                response.sendRedirect(request.getContextPath() + "/getdata");
+
             } catch (SQLException e) {
                 e.printStackTrace();
             }

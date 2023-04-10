@@ -11,6 +11,11 @@ public class AuthentificationFilter extends HttpServlet {
         HttpSession session = request.getSession();
         Boolean authenticated = (Boolean) session.getAttribute("authenticated");
 
+        if ((request.getRequestURI().endsWith(".css")) || (request.getContextPath().endsWith(".jpg"))) {
+            super.service(request, response); // пропустить запрос к файлу CSS
+            return;
+        }
+
         if (authenticated == null || !authenticated) {
             response.sendRedirect(request.getContextPath() + "/login.jsp");
         } else {
