@@ -50,7 +50,6 @@
         <p class="data">Адрес: ${address}</p>
         <p class="data">График работы: ${schedule}</p>
     </div>
-    </p>
 </div>
 </body>
 </html>
