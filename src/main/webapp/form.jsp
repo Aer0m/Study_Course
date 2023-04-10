@@ -46,7 +46,7 @@
     var endtime = document.querySelector('.endtime');
 
     form.addEventListener('submit', function () {
-        event.preventDefault(); //прерывает метод submit для просмотра значений полей формы
+        //event.preventDefault(); //прерывает метод submit для просмотра значений полей формы
         console.log('clicked on validate');
         console.log('fullname: ', fullname.value);
         console.log('age: ', age.value);
@@ -64,6 +64,7 @@
         var fields = form.querySelectorAll('.field');
         for (var i = 0; i < fields.length; i++) {
             if (!fields[i].value) {
+                event.preventDefault();
                 console.log('field is blank', fields[i]);
                 var error = document.createElement('div');
                 error.className='error';
