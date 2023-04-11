@@ -47,7 +47,28 @@
     </div>
 </header>
 <body>
-
+<div class="filter">
+    <form action="show" method="post">
+        <label for="county">Округ:</label>
+        <select id="county" name="county">
+            <option value="ВАО">ВАО</option>
+            <option value="ЗАО">ЗАО</option>
+            <option value="ЗелАО">ЗелАО</option>
+            <option value="САО">САО</option>
+            <option value="СВАО">СВАО</option>
+            <option value="СЗАО">СЗАО</option>
+            <option value="ТиНАО">ТИНАО</option>
+            <option>ЦАО</option>
+            <option>ЮАО</option>
+            <option>ЮВАО</option>
+            <option>ЮЗАО</option>
+        </select>
+        <label for="neigh">Выберите район:</label>
+        <label for="neigh">Район:</label>
+        <input type="text" id="neigh" name="neigh" class="neigh field"><br><br>
+        <button type="submit">Показать сотрудников</button>
+    </form>
+</div>
 <div class="list">
     <ul class="list-content">
         <%

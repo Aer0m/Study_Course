@@ -18,7 +18,7 @@
         <option>САО</option>
         <option>СВАО</option>
         <option>СЗАО</option>
-        <option>ТИНАО</option>
+        <option>ТиНАО</option>
         <option>ЦАО</option>
         <option>ЮАО</option>
         <option>ЮВАО</option>
