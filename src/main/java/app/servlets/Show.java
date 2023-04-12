@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.*;
+import java.util.ArrayList;
 
 @WebServlet("/show")
 public class Show extends HttpServlet {
@@ -26,6 +28,7 @@ public class Show extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
         request.setCharacterEncoding("UTF-8");
+        ArrayList<String>list = new ArrayList<>();
         try {
             response.setContentType("text/html");
             String county = request.getParameter("county");
@@ -45,12 +48,20 @@ public class Show extends HttpServlet {
                             "AND addresses.neighbourhood = '" + neigh + "';");
                 }
                 while (resultSet.next()){
-
+                    list.add(resultSet.getString(1));
                 }
-
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+            if ((list == null)||(list.isEmpty())) {
+                list.add("Ничего не найдено");
+            }
+            request.setAttribute("list", list);
+            getServletContext().getRequestDispatcher("/show.jsp").forward(request, response);/*
+            PrintWriter out = response.getWriter();
+            for(int i = 0; i < list.size(); i++){
+                out.println(list.get(i));
+            }*/
         }
         catch (Exception e) {
             e.printStackTrace();
