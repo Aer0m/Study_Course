@@ -48,6 +48,14 @@
 <body>
 <div class="filter">
     <form action="show" method="get">
+        <label for="sort">Сортировать</label>
+        <select name="sort" id="sort">
+            <option value="default">По умолчанию</option>
+            <option value="namealph">Алфав. по имени</option>
+            <option value="countyalph">Алфав. по округу</option>
+            <option value="neighalph">Алфав. по району</option>
+            <option value="age">По возрасту</option>
+        </select>
         <label for="county">Округ:</label>
         <select id="county" name="county">
             <option value="ВАО">ВАО</option>
@@ -57,12 +65,11 @@
             <option value="СВАО">СВАО</option>
             <option value="СЗАО">СЗАО</option>
             <option value="ТиНАО">ТИНАО</option>
-            <option>ЦАО</option>
-            <option>ЮАО</option>
-            <option>ЮВАО</option>
-            <option>ЮЗАО</option>
+            <option value="ЦАО">ЦАО</option>
+            <option value="ЮАО">ЮАО</option>
+            <option value="ЮВАО">ЮВАО</option>
+            <option value="ЮЗАО">ЮЗАО</option>
         </select>
-        <label for="neigh">Выберите район:</label>
         <label for="neigh">Район:</label>
         <input type="text" id="neigh" name="neigh" class="neigh field"><br><br>
         <button type="submit">Показать сотрудников</button>

@@ -12,7 +12,7 @@ public class AuthentificationFilter extends HttpServlet {
         Boolean authenticated = (Boolean) session.getAttribute("authenticated");
 
         if ((request.getRequestURI().endsWith(".css")) || (request.getContextPath().endsWith(".jpg"))) {
-            super.service(request, response); // пропустить запрос к файлу CSS
+            super.service(request, response); // пропустить запрос к файлу CSS request.GetPathInfo
             return;
         }
 
