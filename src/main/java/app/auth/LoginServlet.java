@@ -5,7 +5,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "login", value = "/login")
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
     private static final String USERNAME = "admin";

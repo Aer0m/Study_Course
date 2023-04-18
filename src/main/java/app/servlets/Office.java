@@ -16,12 +16,15 @@ public class Office extends HttpServlet {
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         HttpSession session = request.getSession();
         Boolean authenticated = (Boolean) session.getAttribute("authenticated");
-
-        if ((request.getRequestURI().endsWith(".css")) || (request.getContextPath().endsWith(".jpg"))) {
-            super.service(request, response); // пропустить запрос к файлу CSS
-            return;
+/*
+        if (request.getMethod().equals("GET")) { // проверяем тип запроса
+            String path = request.getServletPath();
+            if (path.endsWith(".css") || path.endsWith(".js") || path.endsWith(".png") || path.endsWith(".jpg")) {
+                // игнорируем запросы для статических ресурсов
+                return;
+            }
         }
-
+*/
         if (authenticated == null || !authenticated) {
             response.sendRedirect(request.getContextPath() + "/login.jsp");
         } else {
