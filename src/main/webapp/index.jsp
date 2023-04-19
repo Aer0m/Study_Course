@@ -75,14 +75,21 @@
         <button type="submit">Показать сотрудников</button>
     </form>
 </div>
-<div class="list">
-    <ul class="list-content">
-        <%
-            for(int i = 0; i < employers.toArray().length; i++){
-               out.print("<li nav-item>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+employers.get(i)+"'>" + employers.get(i) + "</a>" + "</li>");
-            }
-        %>
-    </ul>
+<div class="tbl">
+    <table class="table table-striped" style="max-width: 200px" border="1px">
+        <thead>
+        <tr>
+            <th scope="col">Имя</th>
+        </tr>
+        </thead>
+        <tbody>
+            <%
+                for(int i = 0; i < employers.toArray().length; i++){
+                    out.println("<tr><td>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+employers.get(i)+"'>" + employers.get(i) + "</a>" + "</td></tr>");
+                }
+            %>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>

@@ -32,7 +32,7 @@
     <input type="time" id="begintime" name="begintime" class="begintime field"><br><br>
     <label for="endtime">Конец рабочего дня:</label>
     <input type="time" id="endtime" name="endtime" class="endtime field"><br><br>
-    <input type="submit" value="Submit" class="validBtn">
+    <input type="submit" value="Добавить" class="validBtn">
 </form>
 <script lang="javascript">
     var validateBtn = document.querySelector('.validBtn');

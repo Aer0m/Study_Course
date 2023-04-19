@@ -9,14 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="sort">
+    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="filterService_fix">
       <change afterPath="$PROJECT_DIR$/src/main/java/app/ApachePOI/WriteExcel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/auth/AuthentificationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/auth/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/auth/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Office.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reg.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +317,8 @@
       <workItem from="1681722876643" duration="162000" />
       <workItem from="1681723651297" duration="8237000" />
       <workItem from="1681743166062" duration="213000" />
-      <workItem from="1681812279264" duration="9945000" />
+      <workItem from="1681812279264" duration="14079000" />
+      <workItem from="1681831186471" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1674817649454</created>
@@ -404,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681738669394</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="filterService_fix">
+      <created>1681827081787</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681827081787</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +439,8 @@
     <MESSAGE value="emp_filter_undone" />
     <MESSAGE value="list_filter" />
     <MESSAGE value="sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="sort" />
+    <MESSAGE value="filterService_fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="filterService_fix" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
