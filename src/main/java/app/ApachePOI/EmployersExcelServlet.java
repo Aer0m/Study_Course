@@ -1,4 +1,5 @@
-/*
+package app.ApachePOI;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.sql.Connection;
@@ -19,21 +20,19 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import database.config.*;
 
-public class EmployeesExcelServlet extends HttpServlet {
+public class EmployersExcelServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/employees";
-        String user = "root";
-        String password = "password";
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection(jdbcUrl, user, password);
+            Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword());
 
-            String query = "SELECT * FROM employees";
+            String query = "SELECT * FROM employers";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
@@ -88,4 +87,4 @@ public class EmployeesExcelServlet extends HttpServlet {
             throws ServletException, IOException {
         doGet(request, response);
     }
-}*/
+}
