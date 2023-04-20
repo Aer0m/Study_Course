@@ -83,7 +83,7 @@
     </form>
 </div>
 <div class="tbl">
-    <table class="table table-striped" style="max-width: 200px" border="1px">
+    <table class="table table-striped list" style="max-width: 200px" border="1px">
         <thead>
         <tr>
             <th scope="col">Имя</th>

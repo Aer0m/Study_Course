@@ -1,6 +1,5 @@
 package app.servlets;
 
-import database.config.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +10,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Objects;
+import database.config.*;
 
 @WebServlet("/profile")
 public class Profile extends HttpServlet {
@@ -30,7 +30,6 @@ public class Profile extends HttpServlet {
             throws ServletException, IOException{
                 request.setCharacterEncoding("UTF-8");
                 try {
-                    //ArrayList<String> employers = new ArrayList<>();
                     response.setContentType("text/html");
 
                     String dbPerson = "", address = "", schedule = "";
@@ -69,8 +68,6 @@ public class Profile extends HttpServlet {
                         }
                         if (Objects.equals("404", dbPerson)) {
                             getServletContext().getRequestDispatcher("/404.jsp").forward(request, response);
-                            //тут будет редирект на страницу ошибки
-                            
                         } else {
                             request.setAttribute("person", dbPerson);
                             request.setAttribute("age", age);
