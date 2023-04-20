@@ -58,9 +58,9 @@ public class Download extends HttpServlet {
             Row row = sheet.createRow(rownum++);
             row.createCell(0).setCellValue(employers.get(i));
         }
-
         response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
         response.setHeader("Content-Disposition", "attachment; filename=employers.xlsx");
         workbook.write(response.getOutputStream());
+        response.sendRedirect(request.getContextPath() + "/getdata");
     }
 }

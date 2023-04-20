@@ -90,6 +90,9 @@
             %>
         </tbody>
     </table>
+    <form action="download" method="GET">
+        <input type="submit" value="Скачать в Excel">
+    </form>
 </div>
 </body>
 </html>
