@@ -75,6 +75,13 @@
         <button type="submit">Показать сотрудников</button>
     </form>
 </div>
+<div class="search">
+    <form action="find" method="GET">
+        <label for="person">Поиск</label>
+        <input type="text" id="person" name="person">
+        <button type="submit">Найти</button>
+    </form>
+</div>
 <div class="tbl">
     <table class="table table-striped" style="max-width: 200px" border="1px">
         <thead>

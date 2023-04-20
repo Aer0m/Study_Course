@@ -1,9 +1,4 @@
-package app.ApachePOI;
-
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+package app.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,8 +11,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import database.config.*;
 
-@WebServlet("/download")
-public class Download extends HttpServlet {
+@WebServlet("/find")
+public class Search extends HttpServlet {
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         HttpSession session = request.getSession();
         Boolean authenticated = (Boolean) session.getAttribute("authenticated");
@@ -28,39 +23,31 @@ public class Download extends HttpServlet {
             super.service(request, response);
         }
     }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException{
         request.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html");
-        String sort = request.getParameter("sort");
-        ArrayList<String> employers = new ArrayList<>();
-
+        ArrayList<String> list = new ArrayList<>();
         try {
+            response.setContentType("text/html");
+            String person = request.getParameter("person");
             try (Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword())) {
                 Statement statement = connection.createStatement();
-                ResultSet resultSet = statement.executeQuery("SELECT * FROM employers ORDER BY fullname");
+                ResultSet resultSet = statement.executeQuery("SELECT * FROM employers WHERE fullname = '"+person+"'ORDER BY fullname");
                 while(resultSet.next()){
-                    employers.add(resultSet.getString(2));
+                    list.add(resultSet.getString(2));
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+            if ((list == null)||(list.isEmpty())) {
+                list.add("Ничего не найдено");
+            }
+            request.setAttribute("list", list);
+            getServletContext().getRequestDispatcher("/search.jsp").forward(request, response);
         }
+
         catch (Exception e) {
             e.printStackTrace();
         }
-
-        XSSFWorkbook workbook = new XSSFWorkbook();
-        XSSFSheet sheet = workbook.createSheet("Список");
-        int rownum = 0;
-        for (int i = 0; i < employers.size(); i++) {
-            Row row = sheet.createRow(rownum++);
-            row.createCell(0).setCellValue(employers.get(i));
-        }
-        response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
-        response.setHeader("Content-Disposition", "attachment; filename=employers.xlsx");
-        workbook.write(response.getOutputStream());
-        response.sendRedirect(request.getContextPath() + "/getdata");
     }
 }
