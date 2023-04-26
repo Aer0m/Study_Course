@@ -9,18 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="excel with filters">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/auth/AuthFilter.java" afterDir="false" />
+    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="new_auth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ApachePOI/DownloadSorted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ApachePOI/DownloadSorted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/auth/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/auth/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Chart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Chart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/CreateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/CreateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Office.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/auth/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/auth/AuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/form.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -333,7 +325,7 @@
       <workItem from="1682060531490" duration="10000" />
       <workItem from="1682495279902" duration="1153000" />
       <workItem from="1682496445825" duration="2657000" />
-      <workItem from="1682499119393" duration="9909000" />
+      <workItem from="1682499119393" duration="10389000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1674817649454</created>
@@ -454,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682002306345</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="new_auth">
+      <created>1682509661816</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1682509661816</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +486,8 @@
     <MESSAGE value="download_butt" />
     <MESSAGE value="search" />
     <MESSAGE value="excel with filters" />
-    <option name="LAST_COMMIT_MESSAGE" value="excel with filters" />
+    <MESSAGE value="new_auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="new_auth" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

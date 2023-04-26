@@ -9,7 +9,7 @@
     <label for="fullname">ФИО:</label>
     <input type="text" id="fullname" name="fullname" class="fullname field"><br><br>
     <label for="age">Возраст:</label>
-    <input type="text" id="age" name="age" class="age field"><br><br>
+    <input type="number" id="age" name="age" class="age field"><br><br>
     <label for="county">Округ:</label>
     <select id="county" name="county" class="county field">
         <option>ВАО</option>
