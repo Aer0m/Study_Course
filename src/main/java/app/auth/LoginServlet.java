@@ -14,16 +14,20 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        try {
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
 
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        if (USERNAME.equals(username) && PASSWORD.equals(password)) {
-            HttpSession session = request.getSession();
-            session.setAttribute("authenticated", true);
-            response.sendRedirect("getdata");
-        } else {
-            response.sendRedirect("login.jsp?error=true");
+            if (USERNAME.equals(username) && PASSWORD.equals(password)) {
+                HttpSession session = request.getSession();
+                session.setAttribute("authenticated", true);
+                response.sendRedirect("getdata");
+            } else {
+                response.sendRedirect("login.jsp?error=true");
+            }
+        }
+        catch (IOException e){
+            e.printStackTrace();
         }
     }
 }
