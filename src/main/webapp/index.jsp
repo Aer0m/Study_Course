@@ -1,5 +1,6 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="app.model.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <header>
-    <%ArrayList<String> employers = (ArrayList<String>) (request.getAttribute("employers"));%>
+    <%ArrayList<User> employers = (ArrayList<User>) request.getAttribute("employers");%>
     <div class="office-nav">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -31,7 +32,7 @@
                             <a class="nav-link" href="form.jsp">Добавить сотрудника</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="profile?person=<%=employers.get(0)%>">Профиль</a>
+                           <a class="nav-link" href="profile?person=<%=employers.get(0).getFullname()%>">Профиль</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="chart">Графики</a>
@@ -92,7 +93,7 @@
         <tbody>
             <%
                 for(int i = 0; i < employers.toArray().length; i++){
-                    out.println("<tr><td>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+employers.get(i)+"'>" + employers.get(i) + "</a>" + "</td></tr>");
+                    out.println("<tr><td>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+employers.get(i).getFullname()+"'>" + employers.get(i).getFullname() + "</a>" + "</td></tr>");
                 }
             %>
         </tbody>
