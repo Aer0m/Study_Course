@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="Office: war exploded" />
       <artifact name="Office:war exploded" />
     </artifacts-to-build>
   </component>
@@ -9,7 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="office_works">
+    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="office">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,9 +51,6 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectId" id="2K309sIyfND2BXX71zRESPLu2EU" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -65,17 +63,18 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/.idea/workspace/JSP&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/.idea/workspace/JSP/src/main/webapp&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -98,9 +97,10 @@
   </component>
   <component name="RunManager">
     <configuration name="GlassFish 4.1.2" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 4.1.2" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:\Java\jre" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Office-1.0-SNAPSHOT/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Office:war exploded">
+        <artifact name="Office: war exploded">
           <settings />
         </artifact>
       </deployment>
@@ -165,6 +165,7 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="Office:war exploded" />
+          <artifact name="Office: war exploded" />
         </option>
       </method>
     </configuration>
@@ -340,8 +341,17 @@
       <workItem from="1682601779842" duration="25000" />
       <workItem from="1682602061271" duration="948000" />
       <workItem from="1682604383534" duration="635000" />
-      <workItem from="1682605124543" duration="977000" />
-      <workItem from="1682606257723" duration="113000" />
+      <workItem from="1682605124543" duration="725000" />
+      <workItem from="1682607258606" duration="23000" />
+      <workItem from="1682607599814" duration="7000" />
+      <workItem from="1682607611247" duration="27000" />
+      <workItem from="1682607645235" duration="2000" />
+      <workItem from="1682607657843" duration="69000" />
+      <workItem from="1682607733513" duration="336000" />
+      <workItem from="1682608076361" duration="12000" />
+      <workItem from="1682608094533" duration="18000" />
+      <workItem from="1682608185453" duration="708000" />
+      <workItem from="1682608984673" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1674817649454</created>
@@ -490,14 +500,7 @@
       <option name="project" value="LOCAL" />
       <updated>1682604912251</updated>
     </task>
-    <task id="LOCAL-00022" summary="office_works">
-      <created>1682605947577</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1682605947577</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,8 +536,7 @@
     <MESSAGE value="new_auth" />
     <MESSAGE value="ageInput_number" />
     <MESSAGE value="office" />
-    <MESSAGE value="office_works" />
-    <option name="LAST_COMMIT_MESSAGE" value="office_works" />
+    <option name="LAST_COMMIT_MESSAGE" value="office" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
