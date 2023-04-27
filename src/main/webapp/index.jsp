@@ -88,6 +88,7 @@
         <thead>
         <tr>
             <th scope="col">Имя</th>
+            <th scope="col">Возраст</th>
         </tr>
         </thead>
         <tbody>
