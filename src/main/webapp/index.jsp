@@ -94,7 +94,8 @@
         <tbody>
             <%
                 for(int i = 0; i < employers.toArray().length; i++){
-                    out.println("<tr><td>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+employers.get(i).getFullname()+"'>" + employers.get(i).getFullname() + "</a>" + "</td></tr>");
+                    out.println("<tr><td>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+employers.get(i).getFullname()+"'>" + employers.get(i).getFullname() + "</a>" + "</td>");
+                    out.println("<td>"+employers.get(i).getAge()+"</td></tr>");
                 }
             %>
         </tbody>
