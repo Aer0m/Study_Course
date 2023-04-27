@@ -9,10 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="new_auth">
+    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="ageInput_number">
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/auth/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/auth/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Office.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/join_query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/join_query.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +33,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/app/servlets/Office.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -54,35 +59,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/.idea/workspace/untitled&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/User/.idea/workspace/JSP",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
-      &quot;PostgreSQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\.idea\workspace\JSP\src\main\webapp\css" />
@@ -325,7 +330,17 @@
       <workItem from="1682060531490" duration="10000" />
       <workItem from="1682495279902" duration="1153000" />
       <workItem from="1682496445825" duration="2657000" />
-      <workItem from="1682499119393" duration="10389000" />
+      <workItem from="1682499119393" duration="14161000" />
+      <workItem from="1682581364248" duration="30000" />
+      <workItem from="1682589123245" duration="1992000" />
+      <workItem from="1682591869835" duration="2351000" />
+      <workItem from="1682597183711" duration="604000" />
+      <workItem from="1682599033927" duration="164000" />
+      <workItem from="1682600617985" duration="623000" />
+      <workItem from="1682601599577" duration="38000" />
+      <workItem from="1682601779842" duration="25000" />
+      <workItem from="1682602061271" duration="948000" />
+      <workItem from="1682604383534" duration="113000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1674817649454</created>
@@ -453,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682509661816</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ageInput_number">
+      <created>1682510156469</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682510156469</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +509,8 @@
     <MESSAGE value="search" />
     <MESSAGE value="excel with filters" />
     <MESSAGE value="new_auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="new_auth" />
+    <MESSAGE value="ageInput_number" />
+    <option name="LAST_COMMIT_MESSAGE" value="ageInput_number" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
