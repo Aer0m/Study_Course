@@ -9,7 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="workspace">
+    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="table plus age">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +32,7 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/app/servlets/Office.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/app/servlets/Office.java" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -349,6 +350,7 @@
       <workItem from="1682608094533" duration="18000" />
       <workItem from="1682608185453" duration="708000" />
       <workItem from="1682608984673" duration="10000" />
+      <workItem from="1682609780836" duration="694000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1674817649454</created>
@@ -504,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682609010943</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="table plus age">
+      <created>1682609460498</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1682609460498</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +550,8 @@
     <MESSAGE value="ageInput_number" />
     <MESSAGE value="office" />
     <MESSAGE value="workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
+    <MESSAGE value="table plus age" />
+    <option name="LAST_COMMIT_MESSAGE" value="table plus age" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
