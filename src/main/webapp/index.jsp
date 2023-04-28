@@ -84,18 +84,22 @@
     </form>
 </div>
 <div class="tbl">
-    <table class="table table-striped list" style="max-width: 200px" border="1px">
+    <table class="table table-striped list" style="max-width: 1000px" border="1px">
         <thead>
         <tr>
             <th scope="col">Имя</th>
             <th scope="col">Возраст</th>
+            <th scope="col">Адрес</th>
+            <th scope="col">Часы работы</th>
         </tr>
         </thead>
         <tbody>
             <%
                 for(int i = 0; i < employers.toArray().length; i++){
                     out.println("<tr><td>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+employers.get(i).getFullname()+"'>" + employers.get(i).getFullname() + "</a>" + "</td>");
-                    out.println("<td>"+employers.get(i).getAge()+"</td></tr>");
+                    out.println("<td>"+employers.get(i).getAge()+"</td>");
+                    out.println("<td>"+employers.get(i).getCounty()+", "+employers.get(i).getNeighbourhood()+", "+employers.get(i).getFull_address()+"</td>");
+                    out.println("<td>"+employers.get(i).getSchedule()+"</td></tr>");
                 }
             %>
         </tbody>
