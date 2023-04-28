@@ -68,7 +68,7 @@ public class Show extends HttpServlet {
                         resultSet = statement.executeQuery(sqlSet);
                     }
                 }
-                else if ((Objects.equals(sort, "neighalph"))) {
+                else if (Objects.equals(sort, "neighalph")) {
                     if (Objects.equals(neigh, "")) {
                         sqlSet = sql + " ORDER BY neighbourhood";
                         resultSet = statement.executeQuery(sqlSet);
