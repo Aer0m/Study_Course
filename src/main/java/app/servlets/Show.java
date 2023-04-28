@@ -35,41 +35,52 @@ public class Show extends HttpServlet {
                     "schedule.id = employers.id_schedule\n" +
                     "WHERE addresses.county = '"+county+"'";
             String sqlNeigh = " AND addresses.neighbourhood = '"+neigh+"'\n";
+            String sqlSet = "";
             try (Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword());
                  Statement statement = connection.createStatement();) {
                 ResultSet resultSet;
                 if(sort=="namealph") {
                     if (neigh == "") {
-                        resultSet = statement.executeQuery(sql + " ORDER BY fullname");
+                        sqlSet = sql + " ORDER BY fullname";
+                        resultSet = statement.executeQuery(sqlSet);
                     } else {
-                        resultSet = statement.executeQuery(sql + sqlNeigh + " ORDER BY fullname");
+                        sqlSet = sql + sqlNeigh + " ORDER BY fullname";
+                        resultSet = statement.executeQuery(sqlSet);
                     }
                 }
                 else if (sort=="age") {
                     if (neigh == "") {
-                        resultSet = statement.executeQuery(sql + " ORDER BY age");
+                        sqlSet = sql + " ORDER BY age";
+                        resultSet = statement.executeQuery(sqlSet);
                     } else {
-                        resultSet = statement.executeQuery(sql + sqlNeigh + " ORDER BY age");
+                        sqlSet = sql + sqlNeigh + " ORDER BY age";
+                        resultSet = statement.executeQuery(sqlSet);
                     }
                 }
                 else if (sort=="countyalph"){
                     if (neigh == "") {
-                        resultSet = statement.executeQuery(sql + " ORDER BY county");
+                        sqlSet = sql + " ORDER BY county";
+                        resultSet = statement.executeQuery(sqlSet);
                     } else {
-                        resultSet = statement.executeQuery(sql + sqlNeigh + " ORDER BY county");
+                        sqlSet = sql + sqlNeigh + " ORDER BY county";
+                        resultSet = statement.executeQuery(sqlSet);
                     }
                 }
                 else if (sort=="neighalph") {
                     if (neigh == "") {
-                        resultSet = statement.executeQuery(sql + " ORDER BY neighbourhood");
+                        sqlSet = sql + " ORDER BY neighbourhood";
+                        resultSet = statement.executeQuery(sqlSet);
                     } else {
-                        resultSet = statement.executeQuery(sql + sqlNeigh + " ORDER BY neighbourhood");
+                        sqlSet = sql + sqlNeigh + " ORDER BY neighbourhood";
+                        resultSet = statement.executeQuery(sqlSet);
                     }
                 }
                 else {
                     if (neigh == "") {
+                        sqlSet = sql;
                         resultSet = statement.executeQuery(sql);
                     } else {
+                        sqlSet = sql + sqlNeigh;
                         resultSet = statement.executeQuery(sql + sqlNeigh);
                     }
                 }
@@ -91,6 +102,7 @@ public class Show extends HttpServlet {
                 User user = new User("Ничего не найдено");
                 list.add(user);
             }
+            request.setAttribute("sqlSet", sqlSet);
             request.setAttribute("list", list);
             getServletContext().getRequestDispatcher("/show.jsp").forward(request, response);
         }

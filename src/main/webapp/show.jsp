@@ -108,9 +108,11 @@
                 out.println("</tbody>\n" +
                         "    </table>");
             }
+            //String sqlSet = (String) request.getAttribute("sqlSet");
+            //out.println(sqlset);
         %>
     <form action="dsorted" method="GET">
-        <input type="hidden" name="list" value="<%= list.toString() %>">
+        <input type="hidden" name="sqlset" value="${sqlSet}">
         <input type="submit" value="Скачать в Excel">
     </form>
 </div>
