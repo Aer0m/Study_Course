@@ -22,28 +22,27 @@ public class Profile extends HttpServlet {
 
                     String dbPerson = "", address = "", schedule = "";
                     int age = 0;
-                    String person = request.getParameter("person");
+                    int person = Integer.parseInt(request.getParameter("person"));
                         try (Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword())) {
                             Statement statement = connection.createStatement();
-                            ResultSet resultSet = statement.executeQuery("SELECT employers.fullname, employers.age,\n" +
+                            ResultSet resultSet = statement.executeQuery("SELECT employers.id, employers.fullname, employers.age,\n" +
                                     "addresses.county, addresses.neighbourhood, addresses.full_address, \n" +
                                     "schedule.begintime, schedule.endtime\n" +
                                     "FROM employers\n" +
                                     "JOIN addresses ON \n" +
                                     "addresses.id = employers.id_address\n" +
                                     "JOIN schedule ON\n" +
-                                    "schedule.id = employers.id_schedule\n" +
-                                    "WHERE fullname = '" +
-                                    person + "'");
+                                    "schedule.id = employers.id_schedule \n" +
+                                    "WHERE employers.id='"+person+"'");
                             while (resultSet.next()) {
-                                if(Objects.equals(person, resultSet.getString(1))) {
-                                    dbPerson = resultSet.getString(1);
-                                    age = resultSet.getInt(2);
-                                    address = resultSet.getString(3) + ", " +
-                                            resultSet.getString(4) + ", " +
-                                            resultSet.getString(5);
-                                    schedule = resultSet.getString(6) + " — " +
-                                            resultSet.getString(7);
+                                if(person == resultSet.getInt(1)) {
+                                    dbPerson = resultSet.getString(2);
+                                    age = resultSet.getInt(3);
+                                    address = resultSet.getString(4) + ", " +
+                                            resultSet.getString(5) + ", " +
+                                            resultSet.getString(6);
+                                    schedule = resultSet.getString(7) + " — " +
+                                            resultSet.getString(8);
 
                                     break;
                                 } else {

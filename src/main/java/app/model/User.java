@@ -47,4 +47,8 @@ public class User {
         this.full_address = full_address;
         this.schedule = schedule;
     }
+
+    public User(String fullname){
+        this.fullname = fullname;
+    }
 }

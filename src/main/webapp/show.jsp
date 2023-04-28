@@ -1,5 +1,7 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="app.model.*" %>
+<%@ page import="java.util.Objects" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <header>
-    <%ArrayList<String> list = (ArrayList<String>) (request.getAttribute("list"));%>
+    <%ArrayList<User> list = (ArrayList<User>) (request.getAttribute("list"));%>
     <div class="office-nav">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -31,7 +33,7 @@
                             <a class="nav-link" href="form.jsp">Добавить сотрудника</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="profile?person=<%=list.get(0)%>">Профиль</a>
+                            <a class="nav-link" href="profile?person=<%=list.get(0).getId()%>">Профиль</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="chart">Графики</a>
@@ -82,18 +84,31 @@
         <button type="submit">Найти</button>
     </form>
 </div>
-<div class="list">
-    <ul class="list-content">
+<div class="tbl">
         <%
-            if ((list.get(0))=="Ничего не найдено"){
-                out.print("<li nav-item>" + "Ничего не найдено" + "</li>");
+            if (Objects.equals((list.get(0).getFullname()), "Ничего не найдено")){
+                out.print("• Ничего не найдено");
             } else {
+                out.println("<table class=\"table table-striped list\" style=\"max-width: 1000px\" border=\"1px\">\n" +
+                        "        <thead>\n" +
+                        "        <tr>\n" +
+                        "            <th scope=\"col\">Имя</th>\n" +
+                        "            <th scope=\"col\">Возраст</th>\n" +
+                        "            <th scope=\"col\">Адрес</th>\n" +
+                        "            <th scope=\"col\">Часы работы</th>\n" +
+                        "        </tr>\n" +
+                        "        </thead>\n" +
+                        "        <tbody>");
                 for(int i = 0; i < list.toArray().length; i++){
-                    out.print("<li nav-item>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+list.get(i)+"'>" + list.get(i) + "</a>" + "</li>");
+                    out.println("<tr><td>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+list.get(i).getId()+"'>" + list.get(i).getFullname() + "</a>" + "</td>");
+                    out.println("<td>"+list.get(i).getAge()+"</td>");
+                    out.println("<td>"+list.get(i).getCounty()+", "+list.get(i).getNeighbourhood()+", "+list.get(i).getFull_address()+"</td>");
+                    out.println("<td>"+list.get(i).getSchedule()+"</td></tr>");
                 }
+                out.println("</tbody>\n" +
+                        "    </table>");
             }
         %>
-    </ul>
     <form action="dsorted" method="GET">
         <input type="hidden" name="list" value="<%= list.toString() %>">
         <input type="submit" value="Скачать в Excel">

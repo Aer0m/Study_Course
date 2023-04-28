@@ -32,7 +32,7 @@
                             <a class="nav-link" href="form.jsp">Добавить сотрудника</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="profile?person=<%=employers.get(0).getFullname()%>">Профиль</a>
+                           <a class="nav-link" href="profile?person=<%=employers.get(0).getId()%>">Профиль</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="chart">Графики</a>
@@ -96,7 +96,7 @@
         <tbody>
             <%
                 for(int i = 0; i < employers.toArray().length; i++){
-                    out.println("<tr><td>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+employers.get(i).getFullname()+"'>" + employers.get(i).getFullname() + "</a>" + "</td>");
+                    out.println("<tr><td>" + "<a href='/Office-1.0-SNAPSHOT/profile?person="+employers.get(i).getId()+"'>" + employers.get(i).getFullname() + "</a>" + "</td>");
                     out.println("<td>"+employers.get(i).getAge()+"</td>");
                     out.println("<td>"+employers.get(i).getCounty()+", "+employers.get(i).getNeighbourhood()+", "+employers.get(i).getFull_address()+"</td>");
                     out.println("<td>"+employers.get(i).getSchedule()+"</td></tr>");
