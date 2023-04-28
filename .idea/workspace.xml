@@ -9,12 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="show_reworked">
+    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="download sorted excel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ApachePOI/Download.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ApachePOI/Download.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ApachePOI/DownloadSorted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ApachePOI/DownloadSorted.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/show.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/show.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +34,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/app/ApachePOI/Download.java" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/app/servlets/Office.java" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/app/servlets/Show.java" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/app/servlets/Show.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/webapp/index.jsp" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/webapp/show.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
@@ -358,7 +355,8 @@
       <workItem from="1682608185453" duration="708000" />
       <workItem from="1682608984673" duration="10000" />
       <workItem from="1682609780836" duration="6959000" />
-      <workItem from="1682671849855" duration="8154000" />
+      <workItem from="1682671849855" duration="8246000" />
+      <workItem from="1682680321430" duration="1019000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1674817649454</created>
@@ -549,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682674050180</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="download sorted excel">
+      <created>1682680180368</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1682680180368</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +596,8 @@
     <MESSAGE value="main_table" />
     <MESSAGE value="excel_main_download" />
     <MESSAGE value="show_reworked" />
-    <option name="LAST_COMMIT_MESSAGE" value="show_reworked" />
+    <MESSAGE value="download sorted excel" />
+    <option name="LAST_COMMIT_MESSAGE" value="download sorted excel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

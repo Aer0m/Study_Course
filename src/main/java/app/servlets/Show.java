@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Objects;
+
 import app.model.*;
 
 @WebServlet("/show")
@@ -39,8 +41,8 @@ public class Show extends HttpServlet {
             try (Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword());
                  Statement statement = connection.createStatement();) {
                 ResultSet resultSet;
-                if(sort=="namealph") {
-                    if (neigh == "") {
+                if(Objects.equals(sort, "namealph")) {
+                    if (Objects.equals(neigh, "")) {
                         sqlSet = sql + " ORDER BY fullname";
                         resultSet = statement.executeQuery(sqlSet);
                     } else {
@@ -48,8 +50,8 @@ public class Show extends HttpServlet {
                         resultSet = statement.executeQuery(sqlSet);
                     }
                 }
-                else if (sort=="age") {
-                    if (neigh == "") {
+                else if (Objects.equals(sort, "age")) {
+                    if (Objects.equals(neigh, "")) {
                         sqlSet = sql + " ORDER BY age";
                         resultSet = statement.executeQuery(sqlSet);
                     } else {
@@ -57,8 +59,8 @@ public class Show extends HttpServlet {
                         resultSet = statement.executeQuery(sqlSet);
                     }
                 }
-                else if (sort=="countyalph"){
-                    if (neigh == "") {
+                else if (Objects.equals(sort, "countyalph")){
+                    if (Objects.equals(neigh, "")) {
                         sqlSet = sql + " ORDER BY county";
                         resultSet = statement.executeQuery(sqlSet);
                     } else {
@@ -66,8 +68,8 @@ public class Show extends HttpServlet {
                         resultSet = statement.executeQuery(sqlSet);
                     }
                 }
-                else if (sort=="neighalph") {
-                    if (neigh == "") {
+                else if ((Objects.equals(sort, "neighalph"))) {
+                    if (Objects.equals(neigh, "")) {
                         sqlSet = sql + " ORDER BY neighbourhood";
                         resultSet = statement.executeQuery(sqlSet);
                     } else {
@@ -76,7 +78,7 @@ public class Show extends HttpServlet {
                     }
                 }
                 else {
-                    if (neigh == "") {
+                    if (Objects.equals(neigh, "")) {
                         sqlSet = sql;
                         resultSet = statement.executeQuery(sql);
                     } else {
