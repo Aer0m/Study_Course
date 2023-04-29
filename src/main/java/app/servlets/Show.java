@@ -36,6 +36,7 @@ public class Show extends HttpServlet {
                     "JOIN schedule ON\n" +
                     "schedule.id = employers.id_schedule\n" +
                     "WHERE addresses.county = '"+county+"'";
+            String sqlFree = "";
             String sqlNeigh = " AND addresses.neighbourhood = '"+neigh+"'\n";
             String sqlSet = "";
             try (Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword());

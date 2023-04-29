@@ -59,6 +59,7 @@
         </select>
         <label for="county">Округ:</label>
         <select id="county" name="county">
+            <option value="All">Все</option>
             <option value="ВАО">ВАО</option>
             <option value="ЗАО">ЗАО</option>
             <option value="ЗелАО">ЗелАО</option>

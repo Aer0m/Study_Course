@@ -9,7 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="string check fixed" />
+    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="extra brackets removed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -353,7 +357,8 @@
       <workItem from="1682608984673" duration="10000" />
       <workItem from="1682609780836" duration="6959000" />
       <workItem from="1682671849855" duration="8246000" />
-      <workItem from="1682680321430" duration="1327000" />
+      <workItem from="1682680321430" duration="2188000" />
+      <workItem from="1682695143016" duration="4436000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1674817649454</created>
@@ -558,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682682948384</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="extra brackets removed">
+      <created>1682683225575</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1682683225575</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +588,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="DbConfig" />
     <MESSAGE value="create_form" />
     <MESSAGE value="create_query" />
     <MESSAGE value="utf-8" />
@@ -601,18 +612,10 @@
     <MESSAGE value="show_reworked" />
     <MESSAGE value="download sorted excel" />
     <MESSAGE value="string check fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="string check fixed" />
+    <MESSAGE value="extra brackets removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="extra brackets removed" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/app/ApachePOI/DownloadSorted.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="GlassfishConfiguration">
         <watch expression="request.getRequestURI()" />
