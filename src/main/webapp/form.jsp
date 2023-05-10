@@ -3,37 +3,40 @@
 <head>
     <title>Добавить работника</title>
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/loginstyle.css">
 </head>
 <body>
-<form action="create" method="post" accept-charset="UTF-8" class="form-valid">
-    <label for="fullname">ФИО:</label>
-    <input type="text" id="fullname" name="fullname" class="fullname field"><br><br>
-    <label for="age">Возраст:</label>
-    <input type="number" id="age" name="age" class="age field"><br><br>
-    <label for="county">Округ:</label>
-    <select id="county" name="county" class="county field">
-        <option>ВАО</option>
-        <option>ЗАО</option>
-        <option>ЗелАО</option>
-        <option>САО</option>
-        <option>СВАО</option>
-        <option>СЗАО</option>
-        <option>ТиНАО</option>
-        <option>ЦАО</option>
-        <option>ЮАО</option>
-        <option>ЮВАО</option>
-        <option>ЮЗАО</option>
-    </select><br><br>
-    <label for="neigh">Район:</label>
-    <input type="text" id="neigh" name="neigh" class="neigh field"><br><br>
-    <label for="address">Адрес:</label>
-    <input type="text" id="address" name="address" class="address field"><br><br>
-    <label for="begintime">Начало рабочего дня:</label>
-    <input type="time" id="begintime" name="begintime" class="begintime field"><br><br>
-    <label for="endtime">Конец рабочего дня:</label>
-    <input type="time" id="endtime" name="endtime" class="endtime field"><br><br>
-    <input type="submit" value="Добавить" class="validBtn">
-</form>
+<div class="testbox">
+    <form action="create" method="post" accept-charset="UTF-8" class="form-valid">
+        <label for="fullname">ФИО:</label>
+        <input type="text" id="fullname" name="fullname" class="fullname field"><br><br>
+        <label for="age">Возраст:</label>
+        <input type="number" id="age" name="age" class="age field"><br><br>
+        <label for="county">Округ:</label>
+        <select id="county" name="county" class="county field">
+            <option>ВАО</option>
+            <option>ЗАО</option>
+            <option>ЗелАО</option>
+            <option>САО</option>
+            <option>СВАО</option>
+            <option>СЗАО</option>
+            <option>ТиНАО</option>
+            <option>ЦАО</option>
+            <option>ЮАО</option>
+            <option>ЮВАО</option>
+            <option>ЮЗАО</option>
+        </select><br><br>
+        <label for="neigh">Район:</label>
+        <input type="text" id="neigh" name="neigh" class="neigh field"><br><br>
+        <label for="address">Адрес:</label>
+        <input type="text" id="address" name="address" class="address field"><br><br>
+        <label for="begintime">Начало рабочего дня:</label>
+        <input type="time" id="begintime" name="begintime" class="begintime field"><br><br>
+        <label for="endtime">Конец рабочего дня:</label>
+        <input type="time" id="endtime" name="endtime" class="endtime field"><br><br>
+        <input type="submit" value="Добавить" class="validBtn">
+    </form>
+</div>
 <script lang="javascript">
     var validateBtn = document.querySelector('.validBtn');
     var form = document.querySelector('.form-valid');

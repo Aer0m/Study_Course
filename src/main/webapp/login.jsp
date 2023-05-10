@@ -3,16 +3,18 @@
 <html><head>
     <meta charset="UTF-8">
     <title>Вход</title>
-    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
-    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/loginstyle.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 </head>
 <body>
-<form action="login" method="post">
-    <label for="username">Логин:</label>
-    <input type="text" id="username" name="username"><br><br>
-    <label for="password">Пароль:</label>
-    <input type="password" id="password" name="password"><br><br>
-    <input type="submit" value="Войти">
-</form>
+<div class="testbox">
+    <h1>Вход</h1>
+    <form action="login" method="post">
+        <hr>
+        <input type="text" name="username" id="username" placeholder="Логин" required/>
+        <input type="password" name="password" id="password" placeholder="Пароль" required/><br/>
+        <button type="submit" class="btn btn-success">Success</button>
+    </form>
+</div>
 </body>
 </html>

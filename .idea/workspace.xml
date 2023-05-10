@@ -9,10 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="extra brackets removed">
+    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="global query stub">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/loginstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -359,6 +361,10 @@
       <workItem from="1682671849855" duration="8246000" />
       <workItem from="1682680321430" duration="2188000" />
       <workItem from="1682695143016" duration="4436000" />
+      <workItem from="1682777434434" duration="107000" />
+      <workItem from="1683021192593" duration="1880000" />
+      <workItem from="1683023919767" duration="3393000" />
+      <workItem from="1683722550366" duration="4291000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1674817649454</created>
@@ -570,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682683225575</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="global query stub">
+      <created>1682777504098</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1682777504098</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +601,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create_form" />
     <MESSAGE value="create_query" />
     <MESSAGE value="utf-8" />
     <MESSAGE value="form_validation" />
@@ -613,7 +625,8 @@
     <MESSAGE value="download sorted excel" />
     <MESSAGE value="string check fixed" />
     <MESSAGE value="extra brackets removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="extra brackets removed" />
+    <MESSAGE value="global query stub" />
+    <option name="LAST_COMMIT_MESSAGE" value="global query stub" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
