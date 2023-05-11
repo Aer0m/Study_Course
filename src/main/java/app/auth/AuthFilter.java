@@ -20,6 +20,13 @@ public class AuthFilter implements Filter {
                     HttpServletRequest req = (HttpServletRequest) request;
                     HttpServletResponse res = (HttpServletResponse) response;
 
+                    String path = req.getRequestURI().substring(req.getContextPath().length());
+
+                    if (path.endsWith(".css")) {
+                        chain.doFilter(request, response);
+                        return;
+                    }
+
                     String uri = req.getRequestURI();
                     this.context.log("Requested Resource::" + uri);
 
@@ -30,6 +37,7 @@ public class AuthFilter implements Filter {
                         chain.doFilter(request, response);
                         return;
                     }
+
 
                     if (session == null || session.getAttribute("authenticated") == null) {
                         this.context.log("Unauthorized access request");
