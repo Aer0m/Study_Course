@@ -13,7 +13,7 @@
         <hr>
         <input type="text" name="username" id="username" placeholder="Логин" required/>
         <input type="password" name="password" id="password" placeholder="Пароль" required/><br/>
-        <button type="submit" class="btn btn-success">Success</button>
+        <button type="submit" class="btn btn-success">Войти</button>
     </form>
 </div>
 </body>

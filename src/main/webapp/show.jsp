@@ -72,6 +72,7 @@
             <option value="ЮВАО">ЮВАО</option>
             <option value="ЮЗАО">ЮЗАО</option>
         </select>
+        <br />
         <label for="neigh">Район:</label>
         <input type="text" id="neigh" name="neigh" class="neigh field"><br><br>
         <button type="submit">Показать сотрудников</button>
@@ -108,11 +109,10 @@
                 out.println("</tbody>\n" +
                         "    </table>");
             }
-            //String sqlSet = (String) request.getAttribute("sqlSet");
-            //out.println(sqlset);
         %>
-    <form action="dsorted" method="GET">
-        <input type="hidden" name="sqlset" value="${sqlSet}">
+</div>
+<div align="center">
+    <form action="download" method="GET">
         <input type="submit" value="Скачать в Excel">
     </form>
 </div>

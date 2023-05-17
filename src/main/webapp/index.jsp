@@ -47,6 +47,13 @@
     </div>
 </header>
 <body>
+<div class="search" align="center">
+    <form action="find" method="GET">
+        <label for="person">Поиск</label>
+        <input type="text" id="person" name="person">
+        <button type="submit">Найти</button>
+    </form>
+</div>
 <div class="cont">
     <div class="filter">
         <form action="show" method="get">
@@ -80,13 +87,6 @@
         </form>
     </div>
 </div>
-<div class="search">
-    <form action="find" method="GET">
-        <label for="person">Поиск</label>
-        <input type="text" id="person" name="person">
-        <button type="submit">Найти</button>
-    </form>
-</div>
 <div class="tbl">
     <table class="table table-striped list" style="max-width: 1000px" border="1px">
         <thead>
@@ -108,9 +108,11 @@
             %>
         </tbody>
     </table>
-    <form action="download" method="GET">
-        <input type="submit" value="Скачать в Excel">
-    </form>
+</div>
+<div align="center">
+<form action="download" method="GET">
+    <input type="submit" value="Скачать в Excel">
+</form>
 </div>
 </body>
 </html>
