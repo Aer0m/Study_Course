@@ -9,11 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="download_excel_servlet_stub">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="b3ae9c35-aa0e-4772-b3df-1118cbd39488" name="Changes" comment="sort_fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/servlets/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/servlets/Show.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,7 +363,7 @@
       <workItem from="1683023919767" duration="3393000" />
       <workItem from="1683722550366" duration="16014000" />
       <workItem from="1683893790672" duration="8649000" />
-      <workItem from="1684312084559" duration="9093000" />
+      <workItem from="1684312084559" duration="11053000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1674817649454</created>
@@ -599,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683804208977</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="sort_fixed">
+      <created>1684322981598</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1684322981598</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,8 +621,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="form_validation" />
-    <MESSAGE value="submit_fix" />
     <MESSAGE value="emp_filter_undone" />
     <MESSAGE value="list_filter" />
     <MESSAGE value="sort" />
@@ -642,7 +644,9 @@
     <MESSAGE value="global query stub" />
     <MESSAGE value="form style" />
     <MESSAGE value="filter css fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="filter css fix" />
+    <MESSAGE value="download_excel_servlet_stub" />
+    <MESSAGE value="sort_fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="sort_fixed" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

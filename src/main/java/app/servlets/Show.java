@@ -44,11 +44,11 @@ public class Show extends HttpServlet {
                 }
             } else {
                 if (!county.isEmpty() && (!neigh.isEmpty())) {
-                    sql.append("WHERE county = '").append(county).append("' AND WHERE neigh ='").append(neigh).append("' ");
+                    sql.append("WHERE county = '").append(county).append("' AND WHERE neighbourhood ='").append(neigh).append("' ");
                 } else if ((!county.isEmpty()) && (neigh.isEmpty())) {
                     sql.append("WHERE county='").append(county).append("' ");
                 } else if ((county.isEmpty()) && !neigh.isEmpty()) {
-                    sql.append("WHERE neigh").append(neigh).append("' ");
+                    sql.append("WHERE neighbourhood").append(neigh).append("' ");
                 }
             }
 
