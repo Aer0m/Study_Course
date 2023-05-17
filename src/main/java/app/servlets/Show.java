@@ -18,76 +18,57 @@ import app.model.*;
 @WebServlet("/show")
 public class Show extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+            throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
 
-        ArrayList<User>list = new ArrayList<>();
+        ArrayList<User> list = new ArrayList<>();
         try {
             response.setContentType("text/html");
             String sort = request.getParameter("sort");
             String county = request.getParameter("county");
             String neigh = request.getParameter("neigh");
-            String sql = "SELECT employers.id, employers.fullname, employers.age,\n" +
+
+            StringBuilder sql = new StringBuilder();
+            sql.append("SELECT employers.id, employers.fullname, employers.age,\n" +
                     "addresses.county, addresses.neighbourhood, addresses.full_address, \n" +
                     "schedule.begintime, schedule.endtime\n" +
                     "FROM employers\n" +
                     "JOIN addresses ON \n" +
                     "addresses.id = employers.id_address\n" +
                     "JOIN schedule ON\n" +
-                    "schedule.id = employers.id_schedule\n" +
-                    "WHERE addresses.county = '"+county+"'";
-            String sqlFree = "";
-            String sqlNeigh = " AND addresses.neighbourhood = '"+neigh+"'\n";
-            String sqlSet = "";
+                    "schedule.id = employers.id_schedule ");
+
+            if (Objects.equals(county, "All")) {
+                if (!neigh.isEmpty()) {
+                    sql.append("WHERE neighbourhood = '").append(neigh).append("' ");
+                }
+            } else {
+                if (!county.isEmpty() && (!neigh.isEmpty())) {
+                    sql.append("WHERE county = '").append(county).append("' AND WHERE neigh ='").append(neigh).append("' ");
+                } else if ((!county.isEmpty()) && (neigh.isEmpty())) {
+                    sql.append("WHERE county='").append(county).append("' ");
+                } else if ((county.isEmpty()) && !neigh.isEmpty()) {
+                    sql.append("WHERE neigh").append(neigh).append("' ");
+                }
+            }
+
+                if (sort.equalsIgnoreCase("namealph")) {
+                    sql.append("ORDER BY fullname");
+                } else if (sort.equalsIgnoreCase("age")) {
+                    sql.append("ORDER BY age");
+                } else if (sort.equalsIgnoreCase("countyalph")) {
+                    sql.append("ORDER BY county");
+                } else if (sort.equalsIgnoreCase("neighalph")) {
+                    sql.append("ORDER BY neighbourhood");
+                } else if (sort.equalsIgnoreCase("default")) {
+                    sql.append("ORDER BY id");
+                }
+
+            String sqlSet = sql.toString();
             try (Connection connection = DriverManager.getConnection(DbConfig.getUrl(), DbConfig.getUser(), DbConfig.getPassword());
                  Statement statement = connection.createStatement();) {
-                ResultSet resultSet;
-                if(Objects.equals(sort, "namealph")) {
-                    if (Objects.equals(neigh, "")) {
-                        sqlSet = sql + " ORDER BY fullname";
-                        resultSet = statement.executeQuery(sqlSet);
-                    } else {
-                        sqlSet = sql + sqlNeigh + " ORDER BY fullname";
-                        resultSet = statement.executeQuery(sqlSet);
-                    }
-                }
-                else if (Objects.equals(sort, "age")) {
-                    if (Objects.equals(neigh, "")) {
-                        sqlSet = sql + " ORDER BY age";
-                        resultSet = statement.executeQuery(sqlSet);
-                    } else {
-                        sqlSet = sql + sqlNeigh + " ORDER BY age";
-                        resultSet = statement.executeQuery(sqlSet);
-                    }
-                }
-                else if (Objects.equals(sort, "countyalph")){
-                    if (Objects.equals(neigh, "")) {
-                        sqlSet = sql + " ORDER BY county";
-                        resultSet = statement.executeQuery(sqlSet);
-                    } else {
-                        sqlSet = sql + sqlNeigh + " ORDER BY county";
-                        resultSet = statement.executeQuery(sqlSet);
-                    }
-                }
-                else if (Objects.equals(sort, "neighalph")) {
-                    if (Objects.equals(neigh, "")) {
-                        sqlSet = sql + " ORDER BY neighbourhood";
-                        resultSet = statement.executeQuery(sqlSet);
-                    } else {
-                        sqlSet = sql + sqlNeigh + " ORDER BY neighbourhood";
-                        resultSet = statement.executeQuery(sqlSet);
-                    }
-                }
-                else {
-                    if (Objects.equals(neigh, "")) {
-                        sqlSet = sql;
-                        resultSet = statement.executeQuery(sql);
-                    } else {
-                        sqlSet = sql + sqlNeigh;
-                        resultSet = statement.executeQuery(sql + sqlNeigh);
-                    }
-                }
-                while (resultSet.next()){
+                ResultSet resultSet = statement.executeQuery(sqlSet);
+                while (resultSet.next()) {
                     int id = resultSet.getInt(1);
                     String fullname = resultSet.getString(2);
                     int age = resultSet.getInt(3);
@@ -101,15 +82,14 @@ public class Show extends HttpServlet {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            if ((list == null)||(list.isEmpty())) {
+            if ((list == null) || (list.isEmpty())) {
                 User user = new User("Ничего не найдено");
                 list.add(user);
             }
             request.setAttribute("sqlSet", sqlSet);
             request.setAttribute("list", list);
             getServletContext().getRequestDispatcher("/show.jsp").forward(request, response);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
